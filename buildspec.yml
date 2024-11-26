@@ -17,8 +17,8 @@ phases:
     commands:
       - echo "Building Docker image..."
       - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simplepythonflaskapp:latest" .
-      - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simplepythonflaskapp:latest"
+      - docker build -t "adititdkr13/adititdkr-devops:2" .
+      - docker push "adititdkr13/adititdkr-devops:2"
   post_build:
     commands:
       - echo "Build completed successfully!"
